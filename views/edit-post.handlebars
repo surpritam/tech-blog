@@ -1,0 +1,11 @@
+{{> header}}
+
+<main>
+  <h1>Edit Post</h1>
+  <form id="edit-post-form">
+    <input type="text" id="post-title" name="title" value="{{title}}" required>
+    <textarea id="post-content" name="content" required>{{content}}</textarea>
+    <button type="submit">Update Post</button>
+  </form>
+</main>
+<script src="/js/edit-post.js"></script>

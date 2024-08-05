@@ -1,15 +1,5 @@
-<header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      {{#if logged_in}}
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><button id="logout">Logout</button></li>
-      {{else}}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Sign Up</a></li>
-      {{/if}}
-    </ul>
-  </nav>
+<header class="site-header">
+  {{> navigation }}
+  <h1 class="site-title">The Tech Blog</h1>
 </header>
 <script src="/js/logout.js"></script>

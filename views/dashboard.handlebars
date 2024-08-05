@@ -1,12 +1,17 @@
-{{> header}}
+{{!< layouts/main }}
 
-<main>
+<main class="container">
   <h1>Dashboard</h1>
   <div class="post-list">
     {{#each posts}}
-      <article>
-        <h2><a href="/dashboard/edit/{{id}}">{{title}}</a></h2>
-        <p>{{content}}</p>
+      <article class="blog-post">
+        <header>
+          <h2><a href="/dashboard/edit/{{id}}">{{title}}</a></h2>
+          <p class="post-meta">Posted by {{user.username}} on {{format_date createdAt}}</p>
+        </header>
+        <div class="post-content">
+          {{content}}
+        </div>
         <button data-id="{{id}}" class="delete-post">Delete</button>
       </article>
     {{/each}}

@@ -41,11 +41,13 @@
     }
   };
 
-  document
-    .querySelector('#login-form')
-    ?.addEventListener('submit', loginFormHandler);
+  const loginForm = document.querySelector('#login-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', loginFormHandler);
+  }
 
-  document
-    .querySelector('#signup-form')
-    ?.addEventListener('submit', signupFormHandler);
+  const signupForm = document.querySelector('#signup-form');
+  if (signupForm) {
+    signupForm.addEventListener('submit', signupFormHandler);
+  }
 })();

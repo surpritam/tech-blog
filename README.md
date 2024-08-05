@@ -1,6 +1,6 @@
 # Tech Blog
 
-A CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts. This project follows the MVC paradigm, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. The site is deployed on Render.
+A CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts. This project follows the MVC paradigm, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## Table of Contents
 
@@ -76,6 +76,9 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
    * Navigate to the homepage to view existing blog posts.
    * Sign up or log in to create, edit, and delete your own blog posts.
    * Leave comments on posts when logged in.
+
+### Demo
+[Tech Blog demo](https://drive.google.com/file/d/1DMml2ImwAIO9wawcf_sWHldfoIugaZCQ/view?usp=sharing)
 
 ### Contact
 

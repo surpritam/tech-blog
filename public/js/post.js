@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         document.location.replace('/dashboard');
+      } else if (response.status === 401) {
+        document.location.replace('/login');
       } else {
         alert('Failed to delete post.');
       }

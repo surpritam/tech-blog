@@ -1,7 +1,21 @@
+/* Define CSS Variables for consistent theming */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --header-bg-color: #333;
+  --header-text-color: #fff;
+  --post-bg-color: #fff;
+  --post-shadow-color: rgba(0, 0, 0, 0.1);
+  --button-bg-color: #333;
+  --button-hover-bg-color: #555;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
 }
@@ -13,8 +27,8 @@ body {
 }
 
 .site-header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
   padding: 20px 0;
   text-align: center;
   margin-bottom: 20px;
@@ -36,9 +50,10 @@ body {
 
 .nav-item a,
 .nav-item button {
-  color: #fff;
+  color: var(--header-text-color);
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-item button {
@@ -47,22 +62,33 @@ body {
   cursor: pointer;
 }
 
+.nav-item a:hover,
+.nav-item button:hover {
+  color: var(--secondary-color);
+}
+
 .site-title {
   font-size: 2.5em;
   margin: 0;
 }
 
 .blog-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .blog-post {
-  background-color: #fff;
+  background-color: var(--post-bg-color);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--post-shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px var(--post-shadow-color);
 }
 
 .post-title {
@@ -82,13 +108,31 @@ body {
 
 button {
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--button-bg-color);
+  color: var(--header-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .site-header .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .blog-list {
+    grid-template-columns: 1fr;
+  }
 }

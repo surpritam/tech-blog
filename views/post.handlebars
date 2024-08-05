@@ -1,10 +1,12 @@
-{{> header}}
+{{!< layouts/main }}
 
-<main>
-  <article>
-    <h1>{{title}}</h1>
-    <p>by {{user.username}} on {{format_date createdAt}}</p>
-    <div>
+<main class="container">
+  <article class="blog-post">
+    <header>
+      <h1 class="post-title">{{title}}</h1>
+      <p class="post-meta">Posted by {{user.username}} on {{format_date createdAt}}</p>
+    </header>
+    <div class="post-content">
       {{content}}
     </div>
   </article>
@@ -30,5 +32,4 @@
     {{/if}}
   </section>
 </main>
-
 <script src="/js/comment.js"></script>

@@ -14,6 +14,7 @@ A CMS-style blog site where developers can publish their blog posts and comment 
     - [Running the Application](#running-the-application)
   - [Features](#features)
   - [Usage](#usage)
+  - [Demo](#demo)
   - [Contact](#contact)
 
 ## User Story
@@ -85,4 +86,3 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 Pritam Sur - [GitHub](https://github.com/surpritam)
 
 Project Link: https://github.com/surpritam/tech-blog 
-
